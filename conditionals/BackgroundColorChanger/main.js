@@ -1,4 +1,4 @@
-//Using if else conditional statument
+//Using if else conditional statement
 
 
 const buttons = document.querySelectorAll(".btns");
