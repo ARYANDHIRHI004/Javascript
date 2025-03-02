@@ -17,10 +17,16 @@ greet('aryan')
 
 
 //Arrow Function
-const arrow = () => { 
-    console.log('Hello from arrow function');               
-}
+const arrow = () => console.log('Hello from arrow function');               
 arrow() 
+
+
+//First class function
+function applyOperation(a,b,operation){
+    return operation(a,b)
+}
+const result1 = applyOperation(5,2, (x,y)=> x/y)
+
 
 
 //Function Prototype
@@ -33,4 +39,9 @@ const greet2 = function(name){
 }
 
 greet2.describe()
+
+(function(){
+    console.log('IIFE');
+    
+})()
 
