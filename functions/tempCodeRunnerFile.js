@@ -1,0 +1,4 @@
+n(){
+//     console.log('IIFE');
+    
+// })()

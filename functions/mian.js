@@ -40,8 +40,24 @@ const greet2 = function(name){
 
 greet2.describe()
 
-(function(){
-    console.log('IIFE');
+// (function(){
+//     console.log('IIFE');
     
-})()
+// })()
+
+let person1 = {
+    name: "ravi",
+
+    greet: function(){
+        console.log(`Hello ${this.name}`);   
+    }
+}
+
+let person2 = {
+    name: "Aryan",
+}
+
+person1.greet.call(person2)
+
+
 
