@@ -19,7 +19,7 @@ console.log(caffeinated);
 teas.sort()
 console.log(teas);
 
-// Use to for loop to print eact type of tea in the array
+// Use for loop to print eact type of tea in the array
 
 for (let i = 0; i < teas.length; i++) {
     const element = teas[i];
