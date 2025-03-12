@@ -9,4 +9,15 @@ function pataNai(fn, delay){
     };
 };
 
-pataNai("Aryan")
+function greet(name){
+ console.log(name);
+ 
+}
+const sachMeNahiPata = pataNai(() => greet("Aryan"), 3000);
+
+sachMeNahiPata()
+sachMeNahiPata()
+sachMeNahiPata()
+sachMeNahiPata()
+
+
