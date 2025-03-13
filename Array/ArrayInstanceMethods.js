@@ -45,14 +45,14 @@ if (!Array.prototype.myConcate) {
 const myConcateMethod = arr3.myConcate(arr4, arr5)
 // console.log(myConcateMethod);
 
-//2. Array.prototype.copyWithin()
+//3. Array.prototype.copyWithin()
 //This method of array instance shallow copies part of this array to another location i the same array.
 //Returns- same array
 
 const arr6 = [1,2,3,4,5,6]
 const arr8 = [1,2,3,4,5,6]
 const arr7 = ["JS", "JAVA", "RUST"]
-console.log(arr6.copyWithin(0,2,5));
+// console.log(arr6.copyWithin(0,2,5));
 
 
 if (!Array.prototype.myCopyWithin) {
@@ -68,7 +68,60 @@ if (!Array.prototype.myCopyWithin) {
         return this
     }
 }
-console.log(arr8.myCopyWithin(0,2,5));
+// console.log(arr8.myCopyWithin(0,2,5));
+
+
+//4. Array.prototype.entires() --------------Discuss 
+//This method of array instance return a new array object that contains the key-value pairs for each index in the array.
+//Returns- new array
+
+const arr9 = [1,2,3,4,5,6];
+const iterator = arr9.entries();
+console.log(iterator);
+
+if (!Array.prototype.myEntries) {
+    Array.prototype.myEntries = function(){
+        let keyValue;
+        this.forEach((value, index)=>{
+            const newArr = [];
+            newArr.push(index,value)
+            keyValue= newArr
+        })
+        return keyValue
+    }
+}
+// const iterator = arr9.myEntries()
+
+// for (const element of iterator) {
+//     console.log(element);
+    
+// }
+
+
+// 5. Array.prototype.every()
+//This method of array instance tests weather all elements in the array pass the test implemented by the provided function
+//Returns- boolean
+const arr10 = [1,2,3,4,5,6];
+console.log(arr10.every((item)=>item<6));
+
+if (!Array.prototype.myEvery) {
+    let res
+    Array.prototype.myEvery = function(cb){
+        this.forEach((item)=>{
+            res = cb(item)
+        })
+        return res
+    }
+}
+
+console.log(arr10.myEvery((item)=>item<2));
+
+
+
+
+
+
+
 
 
 
