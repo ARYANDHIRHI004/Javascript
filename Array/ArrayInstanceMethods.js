@@ -215,3 +215,26 @@ if(!Array.prototype.myFindLast){
 console.log(arr15.myFindLast(element => element>5));
 
 
+//11. Array.prototype.findLastIndex()
+// It iterates the array in reverse order and returns the value of the first element that satsfies the provided testing function  
+
+const arr16 = [1,2,3,4,5,6];
+// console.log(arr15.findLast(element => element>5));
+
+if(!Array.prototype.myFindLastIndex){
+    Array.prototype.myFindLastIndex = function(cb){
+        for (let i = this.length; i>=0 ; i--) {
+            const value = cb(this[i])
+            if(value){
+                return i
+            }            
+        }
+        return -1
+    }
+}
+console.log(arr15.myFindLastIndex(element => element>5));
+
+
+
+
+
