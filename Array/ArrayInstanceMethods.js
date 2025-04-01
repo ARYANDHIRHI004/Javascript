@@ -135,3 +135,27 @@ if(!Array.prototype.myFill){
 }
 // console.log(arr11.myFill(5, 0,6));
 
+
+// 7. Array.prototype.filter()
+//The filter() method of Array instances creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
+//Returns- array
+
+const arr12 = [1,2,3,4,5,6];
+
+// console.log(arr12.filter((item)=>item<4));
+
+if (!Array.prototype.myFilter) {
+    Array.prototype.myFilter = function(cb){
+        const newArr = []
+        for (let i = 0; i < this.length; i++) {
+            const value = cb(this[i])
+            if(value){
+                newArr.push(this[i])
+            }
+        }
+        return newArr
+    }
+}
+// console.log(arr12.myFilter((item)=>item<5));
+
+
