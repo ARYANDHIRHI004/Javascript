@@ -178,3 +178,22 @@ if(!Array.prototype.myFind){
 }
 // console.log(arr13.myFind(element => element>5));
 
+// 9.Array.prototype.findIndex
+// It returns the index of the first element in an array that satisfies the provided testing function.
+
+const arr14 = [1,2,3,4,5,6];
+if(!Array.prototype.myFindIndex){
+    Array.prototype.myFindIndex = function(cb){
+        for (let i = 0; i < this.length; i++) {
+            const value = cb(this[i])
+            if(value){
+                return i
+            }            
+        }
+        return -1
+    }
+}
+// console.log(arr14.myFindIndex(element => element>3));
+
+
+
