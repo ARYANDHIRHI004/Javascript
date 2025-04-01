@@ -116,4 +116,22 @@ if (!Array.prototype.myEvery) {
 
 // console.log(arr10.myEvery((item)=>item<2));
 
+// 6. Array.prototype.fill()
+//The fill() method of Array instances changes all elements within a range of indices in an array to a static value. It returns the modified array.
+//Returns- array
+
+const arr11 = [1,2,3,4,5,6];
+// console.log(arr10.fill(2, 1,5));
+
+if(!Array.prototype.myFill){
+    Array.prototype.myFill = function(value, start, end){
+        
+        for (let i = start; i < end; i++) {
+            this[i] = value
+        }
+        
+        return this
+    }
+}
+// console.log(arr11.myFill(5, 0,6));
 
