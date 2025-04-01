@@ -159,3 +159,22 @@ if (!Array.prototype.myFilter) {
 // console.log(arr12.myFilter((item)=>item<5));
 
 
+//8 Array.prototype.find()
+//IT returns the first element in the provided array that satisfies the provided testing function 
+
+const arr13 = [1,2,3,4,5,6];
+// console.log(arr13.find(element => element>=2));
+
+if(!Array.prototype.myFind){
+    Array.prototype.myFind = function(cb){
+        for (let i = 0; i < this.length; i++) {
+            const value = cb(this[i])
+            if(value){
+                return this[i]
+            }            
+        }
+        return undefined
+    }
+}
+// console.log(arr13.myFind(element => element>5));
+
