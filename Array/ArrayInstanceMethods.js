@@ -102,7 +102,7 @@ if (!Array.prototype.myEntries) {
 //This method of array instance tests weather all elements in the array pass the test implemented by the provided function
 //Returns- boolean
 const arr10 = [1,2,3,4,5,6];
-console.log(arr10.every((item)=>item<6));
+// console.log(arr10.every((item)=>item<6));
 
 if (!Array.prototype.myEvery) {
     let res
@@ -114,15 +114,6 @@ if (!Array.prototype.myEvery) {
     }
 }
 
-console.log(arr10.myEvery((item)=>item<2));
-
-
-
-
-
-
-
-
-
+// console.log(arr10.myEvery((item)=>item<2));
 
 
