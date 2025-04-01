@@ -212,7 +212,7 @@ if(!Array.prototype.myFindLast){
         return undefined
     }
 }
-console.log(arr15.myFindLast(element => element>5));
+// console.log(arr15.myFindLast(element => element>5));
 
 
 //11. Array.prototype.findLastIndex()
@@ -232,9 +232,29 @@ if(!Array.prototype.myFindLastIndex){
         return -1
     }
 }
-console.log(arr15.myFindLastIndex(element => element>5));
+// console.log(arr15.myFindLastIndex(element => element>5));
 
 
+//12. Arrya.prototype.flat()
+const arr17 = [1,2,[3,[4,5,6]]];
+
+if (!Array.prototype.myFlat) {
+    Array.prototype.myFlat = function(){
+        const newArray = []
+        for (let i = 0; i < this.length; i++) {
+            // if(typeof this[i] === Number){
+            //     newArray.push(this[i])
+            // }
+            if (Array.isArray(this[i])) {
+                for (let j = 0; j < this[i].length; j++) {
+                    newArray.push()
+                }
+            }            
+        }
+        return newArray
+    }
+}
+console.log(arr17.myFlat());
 
 
 
