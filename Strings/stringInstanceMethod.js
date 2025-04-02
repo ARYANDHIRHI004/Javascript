@@ -52,7 +52,31 @@ if (!String.prototype.myConcat) {
         return newStr
     }
 }
-console.log(str3.myConcat(" ", "hello"));
+// console.log(str3.myConcat(" ", "hello"));
+
+//4. String.protopype.endsWith()
+// This method of string determines weather a string ends with the charactoers of this string 
+
+const str4 = "Aryan"
+
+if(!String.prototype.myEndsWith){
+    String.prototype.myEndsWith = function(str, enpPosition){
+        let check;
+        for (let i = 0; i < str.length; i++) {
+            if(this.at(-i-1) === str.at(-i-1)){
+                check = true
+            }
+            else{
+                check = false
+            }
+        }
+        return check  
+    }
+}
+
+// console.log(str4.myEndsWith("ban"));
+
+
 
 
 
