@@ -23,3 +23,22 @@ if(!String.prototype.myAt){
 // console.log(str1.myAt(-1));
 
 
+//2. String.protopype.chatAt()
+// This method of string returns a new string consist of a single char at any givn index
+
+const str2 = "Aryan"
+// console.log(str1.charAt(2));
+
+if(!String.prototype.myCharAt){
+    String.prototype.myCharAt = function(value){
+        if(value < 0 || value > this.length) return ""
+        return this[value]
+    }
+}
+// console.log(str1.myCharAt(8));
+
+
+
+
+
+
