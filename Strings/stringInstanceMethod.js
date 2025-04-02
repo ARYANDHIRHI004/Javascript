@@ -37,6 +37,28 @@ if(!String.prototype.myCharAt){
 }
 // console.log(str1.myCharAt(8));
 
+//3. String.protopype.concat()
+// This method of string concatenates the strign arguments to this strign and returns a new strign
+
+const str3 = "Aryan"
+
+if (!String.prototype.myConcat) {
+    String.prototype.myConcat = function(){
+        let newStr = this
+        for (let i = 0; i < arguments.length; i++) {
+            newStr += arguments[i]
+            
+        }
+        return newStr
+    }
+}
+console.log(str3.myConcat(" ", "hello"));
+
+
+
+
+
+
 
 
 
